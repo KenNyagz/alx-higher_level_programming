@@ -1,2 +1,2 @@
 Beginning python.
-Various concepts and features in the language
+Learning  various concepts and features in the language
