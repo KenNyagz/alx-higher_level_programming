@@ -1,2 +1,2 @@
 #!/bin/bash
-./run_python.sh
+python3 -c "PYFILE"
