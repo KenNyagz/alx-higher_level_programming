@@ -3,13 +3,15 @@
 /**
 *check_cycle - check for a cycle in a linked list
 *@list: pointer to head of linked list
-*Return: Number of odes before loop
+*Return: 1 if there is a loop, 0 of no
 */
 
 int check_cycle(listint_t *list)
 {
-listint_t *fast = list, *slow = list;
+listint_t *fast = list ,*slow = list;
 
+	if (list == NULL)
+		return (0);
 
 	while (fast->next != NULL && fast != NULL)
 	{
