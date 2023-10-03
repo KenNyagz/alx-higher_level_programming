@@ -2,7 +2,11 @@
 import random
 number = random.randint(-10000, 10000)
 
-modlo = abs(number) % 10
+if number < 0:
+    numbercp = -number
+else:
+    numbercp = number
+modlo = numbercp % 10
 
 print(f"Last digit of {number} is {modlo}", end=' ')
 if modlo == 0:
