@@ -5,9 +5,9 @@ if number < 0:
     numbercp = -number
 else:
     numbercp = number
- 
+
 modlo = numbercp % 10
-print(f"Last digit of {number} is {modlo}", end = ' ')
+print(f"Last digit of {number} is {modlo}", end=' ')
 if modlo == 0:
     print("and is 0")
 elif modlo < 6 and modlo != 0:
