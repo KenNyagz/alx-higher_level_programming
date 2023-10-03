@@ -8,7 +8,7 @@ else:
  
 modlo = numbercp % 10
 
-if modlo is 0:
+if modlo == 0:
      print("Last digit of {number} is {modlo} and is 0")
 elif modlo < 6 and modlo != 0:
      print("Last digit of {number} is {modlo} and is less than 6 and not 0"
