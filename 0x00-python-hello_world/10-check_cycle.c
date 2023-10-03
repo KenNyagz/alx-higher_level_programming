@@ -13,10 +13,10 @@ listint_t *fast = list ,*slow = list;
 	if (list == NULL)
 		return (0);
 
-	while (fast->next != NULL && fast != NULL)
+	while (fast != NULL && fast->next != NULL)
 	{
-		fast = list->next->next;
-		slow = list->next;
+		fast = fast->next->next;
+		slow = slow->next;
 		if (slow == fast)
 			return (1);
 	}
