@@ -11,6 +11,6 @@ modlo = numbercp % 10
 if modlo == 0:
      print("Last digit of {number} is {modlo} and is 0")
 elif modlo < 6 and modlo != 0:
-     print("Last digit of {number} is {modlo} and is less than 6 and not 0"
+     print("Last digit of {number} is {modlo} and is less than 6 and not 0")
 else:
-     print("Last digit of {number} is {modlo} and is greater than 5"
+     print("Last digit of {number} is {modlo} and is greater than 5")
