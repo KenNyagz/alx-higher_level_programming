@@ -1,13 +1,21 @@
 #!/bin/bash
 
 import os
-import compileall
 
-py_file = os.enviro.get('PYFILE')
+pyfile = os.environ.get('PYFILE')
 
-output_file = f"{py_file}c"
+#Read python code from file
+with open(pyfile, 'rb') as source_file:
+    source_code = source_file.read()
 
-compileall.compile_file(py_file, force=True)
+#compile code
+compiled_code = compile(source_code, pyfile, 'exec')
 
-PYCFILE="${PYFILE}c"
-python -m py_compile $PYFILE
+#set output filename
+output_file = f"{os.path.splitext(pyfile)[0]}c"
+
+#write compiled code to output file
+with open(outputfile_file, 'wb') as compiled_file:
+    compiled_file.write(compiled_code)
+
+print(f"Successfully compiled {pyfile} to {outputfile}")
