@@ -1,4 +1,13 @@
 #!/bin/bash
 
+import os
+import compileall
+
+py_file = os.enviro.get('PYFILE')
+
+output_file = f"{py_file}c"
+
+compileall.compile_file(py_file, force=True)
+
 PYCFILE="${PYFILE}c"
 python -m py_compile $PYFILE
