@@ -7,7 +7,6 @@ if [ -z "$PYFILE" ]; then
 fi
 
 if [ -e "$PYFILE" ]; then
-    # Compile the file
     python3 -m compileall $PYFILE
 
     output_file="${PYFILE}c"
