@@ -9,13 +9,19 @@
 
 listint_t *insert_node(listint_t **head, int number)
 {
-listint_t *ahead = NULL, *behind = NULL;
+listint_t *ahead = NULL, *behind = NULL, *newnode = NULL;
 int count = 0;
 
 ahead = (*head)->next;
 behind = *head;
-
-
+	newnode = malloc(sizeof(listint_t));
+	if (head == NULL)
+	{
+		*head = newnode;
+		
+	}
+	if (newnode == NULL)
+		return (NULL);
 	while (ahead != NULL && behind != NULL)
 	{
 		++count;
@@ -27,8 +33,9 @@ behind = *head;
 
 			*head = ahead;
 			behind = *head;
+			(*head)->n = number;
 		}
 	}
-
-return (*head);
+free(newnode);
+return (behind);
 }
