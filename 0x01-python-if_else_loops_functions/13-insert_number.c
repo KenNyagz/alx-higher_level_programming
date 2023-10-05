@@ -21,15 +21,14 @@ if (*head == NULL || (*head)->n >= number) /*Insert node at beginning)*/
 {
 	*head = newnode;
 }
-else
-{
+
 	while (current->next != NULL && current->next->n < number)
 	{
 		current = current->next;
 	}
 newnode->next = current->next;
 current->next = newnode;
-}
+
 
 return (newnode);
 }
