@@ -17,7 +17,7 @@ newnode = malloc(sizeof(listint_t));
 if (newnode == NULL)
 	return (NULL);
 newnode->n = number;
-if (*head == NULL) /*Insert node at beginning)*/
+if (*head == NULL || (*head)->n >= number) /*Insert node at beginning)*/
 {
 	*head = newnode;
 }
