@@ -17,14 +17,14 @@ behind = *head;
 	newnode = malloc(sizeof(listint_t));
 	if (head == NULL)
 	{
+		newnode->n = number;
 		*head = newnode;
-		
 	}
 	if (newnode == NULL)
 		return (NULL);
 	while (ahead != NULL && behind != NULL)
 	{
-		++count;
+		count++;
 		ahead = ahead->next;
 		behind = behind->next;
 
