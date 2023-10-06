@@ -19,6 +19,7 @@ if (newnode == NULL)
 newnode->n = number;
 if (*head == NULL || (*head)->n >= number) /*Insert node at beginning)*/
 {
+	newnode->next = *head;
 	*head = newnode;
 }
 else
