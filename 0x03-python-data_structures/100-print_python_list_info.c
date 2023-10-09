@@ -24,5 +24,4 @@ const char *type_name;
 		printf("Element %ld: %s\n", i, type_name);
 		Py_DECREF(item);
 	}
-
 }
