@@ -5,7 +5,7 @@ def element_lengths(matrix=[[]]):
 
 def alt_max(seq):
     if not seq:
-        return
+        return None
     mx = seq[0]
     for item in seq:
         if item > mx:
