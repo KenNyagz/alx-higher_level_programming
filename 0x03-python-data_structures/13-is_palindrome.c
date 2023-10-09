@@ -27,19 +27,17 @@ int *arr, count = 0, i = 0, j = 0;
 		current = current->next;
 	}
 
-	for (i = 0; i <= count; i++)
-		for (j = count; j >= 0; j--)
+	for (i = 0, j = count -1; i < j; i++, j--)
+
 		{
-			if (arr[i] == arr[j])
-				continue;
-			else
+			if (arr[i] != arr[j])
 			{
 				free(arr);
-				return (1);
+				return (0);
 			}
 		}
 
 	free(arr);
 
-return (0); /*not palindrome*/
+return (1); /*is palindrome*/
 }
