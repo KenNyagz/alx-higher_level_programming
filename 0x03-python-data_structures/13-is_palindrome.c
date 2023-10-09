@@ -33,7 +33,10 @@ int *arr, count = 0, i = 0, j = 0;
 			if (arr[i] == arr[j])
 				continue;
 			else
+			{
+				free(arr);
 				return (1);
+			}
 		}
 
 	free(arr);
