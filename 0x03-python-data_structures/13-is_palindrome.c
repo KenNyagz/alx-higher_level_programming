@@ -15,12 +15,15 @@ int *arr, count = 0, i = 0, j = 0;
 		count++;
 		current = current->next;
 	}
+	if (count <= 1)
+		return (1);
 	arr = malloc(sizeof(int) * count);
 	current = *head;
 
 	while (current != NULL)
 	{
 		arr[i] = current->n;
+		i++;
 		current = current->next;
 	}
 
