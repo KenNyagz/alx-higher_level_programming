@@ -8,11 +8,12 @@ if __name__ == "__main__":
         sys.exit(1)
     a = int(sys.argv[1])
     b = int(sys.argv[3])
+    op = sys.argv[2]
     if sys.argv[2] == "+":
         print("{:d} + {:d} = {:d}".format(a, b, calculator_1.add(a, b)))
     elif sys.argv[2] == "-":
         print("{:d} - {:d} = {:d}".format(a, b, calculator_1.sub(a, b)))
-    elif sys.argv[2] == "*":
+    elif op == "*":
         print("{:d} * {:d} = {:d}".format(a, b, calculator_1.mul(a, b)))
     elif sys.argv[2] == "/":
         if b == 0:
