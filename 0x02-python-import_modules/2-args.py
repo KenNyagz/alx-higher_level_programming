@@ -12,5 +12,5 @@ if __name__ == "__main__":
     else:
         print(numargs, "argumenets:")
 
-    for idx in range(1, numargs):
+    for idx in range(1, numargs + 1):
         print("{}: {}".format(idx, sys.argv[idx]))
