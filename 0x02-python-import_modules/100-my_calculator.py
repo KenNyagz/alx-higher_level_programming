@@ -13,7 +13,7 @@ if __name__ == "__main__":
         print("{:d} + {:d} = {:d}".format(a, b, calculator_1.add(a, b)))
     elif sys.argv[2] == "-":
         print("{:d} - {:d} = {:d}".format(a, b, calculator_1.sub(a, b)))
-    elif op == "*":
+    elif op == "x":
         print("{:d} * {:d} = {:d}".format(a, b, calculator_1.mul(a, b)))
     elif sys.argv[2] == "/":
         if b == 0:
