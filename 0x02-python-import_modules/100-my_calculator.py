@@ -15,7 +15,11 @@ if __name__ == "__main__":
     elif sys.argv[2] == "*":
         print("{:d} * {:d} = {:d}".format(a, b, calculator_1.mul(a, b)))
     elif sys.argv[2] == "/":
-        print("{:d} / {:d} = {:d}".format(a, b, calculator_1.div(a, b)))
+        if b == 0:
+            print("Error: Division by zero")
+            sys.exit(1)
+        else:
+            print("{:d} / {:d} = {:d}".format(a, b, calculator_1.div(a, b)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
