@@ -1,10 +1,6 @@
-#!/usr/bin/python3
+#!/usr/bin/pyton3
+
+
 def uniq_add(my_list=[]):
-    uniq_list = set(my_list)
-    num = 0
-
-    for i in uniq_list:
-        num += i
-
-    return (num)
-
+    uniques = set(element for element in my_list)
+    return sum(uniques)
