@@ -3,11 +3,13 @@
 
 def safe_print_list(my_list=[], x=0):
     count = 0
-    for i range(x):
+    for i in range(x):
         try:
-            print(elem[i], end=' ')
+            print(my_list[i], end=' ')
             count += 1
         except Indexerror:
-             break;
+            break
     print()
     return count
+
+safe_print_list([1, 2,3,4], x = 4)
