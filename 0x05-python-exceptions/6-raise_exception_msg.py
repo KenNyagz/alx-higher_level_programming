@@ -2,6 +2,6 @@
 
 
 def raise_exception_msg(message=""):
-    if message = "":
+    if message == "":
         message = "C is fun"
     raise NameError(message)
