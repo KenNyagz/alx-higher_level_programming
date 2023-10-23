@@ -6,11 +6,11 @@ def safe_print_list(my_list=[], x=0):
         print()
         return 0
     count = 0
-    for i in range(x):
-        try:
+    try:
+        for i in range(x):
             print(my_list[i], end=' ')
             count += 1
-        except Indexerror:
-            break
+    except IndexError:
+         pass
     print()
     return count
