@@ -3,7 +3,8 @@
 
 def safe_print_integer_err(value):
     try:
-        print("{:d}".format(value))
+        intval = int(value)
+        print("{:d}".format(intval)
         return True
     except Exception as e:
         print("Exception:", e, file=sys.stderr)
