@@ -2,4 +2,4 @@
 
 
 class Square():
-
+     """Empty class"""
