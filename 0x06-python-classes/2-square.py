@@ -6,15 +6,15 @@ class Square:
     """Square with hidden attribute"""
 
     def __init__(self, size=0):
-        if not int(size):
-            try:
+        try:
+            if not int(size):
                 raise TypeError
-            except TypeError:
+        except TypeError:
                 print("size must be an integer")
-        elif size < 0:
-            try:
+        try:
+            if size < 0:
                 raise ValueError
-            except ValueError:
-                print("size must be >= 0")
-        else:
+        except ValueError:
+            print("size must be >= 0")
+        finally:
             self.__size = size
