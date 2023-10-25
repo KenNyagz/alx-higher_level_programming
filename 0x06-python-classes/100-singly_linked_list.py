@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 """Class Node - defines node of a singly linked list"""
 
 
