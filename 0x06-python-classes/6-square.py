@@ -8,14 +8,17 @@ class Square:
 
 
     def __init__(self, size=0):
+    """ sda"""
         self.__size = size
 
     @property
     def size(self):
+    """dasd"""
         return self.__size
 
     @size.setter
     def size(self, value):
+    """sasasd"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif size < 0:
@@ -24,4 +27,5 @@ class Square:
             self.__size = value
 
     def area(self):
+    """asad"""
         if self.__size == 0:
