@@ -27,12 +27,11 @@ class Square:
         return self.__position
 
     @position.setter
-    def position(self, size=0, position=(0, 0)):
+    def position(self, value):
         """set position of object of class Square"""
         if isinstance(position, tuple) and isinstance(position[0], int) and\
            isinstance(position[1], int):
-            self.__position = position
-            self.__size = size
+            self.__position = value
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
 
