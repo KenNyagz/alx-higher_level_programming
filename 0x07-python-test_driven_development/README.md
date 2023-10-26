@@ -7,7 +7,7 @@ Executable Documentation.
 `Unit tests in python
 
 `Basic Testing
-`Functional testing
+`Functional testing`
 `Unit Testing
 `Integration Testing
     -Bottom-up integration
