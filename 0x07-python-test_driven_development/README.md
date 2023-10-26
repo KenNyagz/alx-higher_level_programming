@@ -29,3 +29,5 @@ Executable Documentation.
 Test Plan`
 `Test Scenario`
 `Test Case`
+
+All the above are concepts to be touch on in this project
