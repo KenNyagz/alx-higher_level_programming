@@ -10,7 +10,7 @@ Basic Testing
 `Functional testing`
 `Unit Testing`
 `Integration Testing`
-    Bottom-up integration`
+    Bottom-up integration
     Top-down integration
 `System Testing`
 `Regression Testing`
