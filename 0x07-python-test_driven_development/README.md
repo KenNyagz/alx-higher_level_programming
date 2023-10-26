@@ -8,24 +8,24 @@ Executable Documentation.
 
 `Basic Testing`
 `Functional testing`
-`Unit Testing
-`Integration Testing
+`Unit Testing`
+`Integration Testing`
     -Bottom-up integration
     -Top-down integration
-`System Testing
-`Regression Testing
-`Acceptance Testing
-`Alpha Testing
-`Beta Testing
-`Non-functional Testing
+`System Testing`
+`Regression Testing`
+`Acceptance Testing`
+`Alpha Testing`
+`Beta Testing`
+`Non-functional Testing`
     -Perfomance Testing
     -Load Testing
     -Stress Testing
-`Usability Testing
+`Usability Testing`
     -UI vs Usability Testing
-`Security Testing
-`Portability Testing
+`Security Testing`
+`Portability Testing`
 
-Test Plan
-`Test Scenario
-`Test Case
+Test Plan`
+`Test Scenario`
+`Test Case`
