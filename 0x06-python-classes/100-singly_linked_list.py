@@ -53,4 +53,4 @@ class SinglyLinkedList:
         while self.__data < head.__data:
             self.__head = head.__next_node
          
-        self.__data = value
+
