@@ -6,7 +6,7 @@ Executable Documentation.
 -m -v flags
 `Unit tests in python
 
-`Basic Testing
+`Basic Testing`
 `Functional testing`
 `Unit Testing
 `Integration Testing
