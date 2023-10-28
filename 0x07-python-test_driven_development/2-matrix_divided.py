@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" """
+"""
+   Function that divides each element of a matrix by a given number
+   and returns a new matrix with the elements subject to the division
+"""
 
 
 def matrix_divided(matrix, div):
@@ -9,7 +12,7 @@ def matrix_divided(matrix, div):
     """
 
     if div is None:
-        return matrix
+        raise TypeError("div must be a number")
 
     # check matrix arg is valid matrix
     if not isinstance(matrix, list) or\
@@ -40,3 +43,5 @@ def matrix_divided(matrix, div):
         new_matrix.append(new_row)
 
     return new_matrix
+
+# print(matrix_divided([[4, 5, 7], [1, 8, 3]], -2))
