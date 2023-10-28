@@ -44,4 +44,4 @@ def matrix_divided(matrix, div):
 
     return new_matrix
 
-# print(matrix_divided([[4, 5, 7], [1, 8, 3]], -2))
+# print(matrix_divided(None, -2))

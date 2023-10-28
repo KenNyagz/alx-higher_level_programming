@@ -51,3 +51,28 @@ Testing with floating point numbers
 Testing with negative numbers
 >>> matrix_divided([[4, 5, 7], [1, 8, 3]], -2)
 [[-2.0, -2.5, -3.5], [-0.5, -4.0, -1.5]]
+
+
+Testing empty matrix
+>>> matrix_divided([[]], -2)
+[[]]
+
+
+Testing edge case of Matrix param being None
+>>> matrix_divided(None, -2)
+Traceback (most recent call last):
+  ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+Tesing a non-int/float arg as div
+>>> matrix_divided([[1, 2], [3, 4]], "I")
+Traceback (most recent call last):
+  ...
+TypeError: div must be a number
+
+Testing a Non-matrix as arg
+>>> matrix_divided("Me Me", 2)
+Traceback (most recent call last):
+  ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
