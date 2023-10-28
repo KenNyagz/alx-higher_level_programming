@@ -76,3 +76,9 @@ Testing a Non-matrix as arg
 Traceback (most recent call last):
   ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Testing: More than 2 arguments passed
+>>> matrix_divided([[12, 23], [2, 5]], [2, 3], 2)
+Traceback (most recent call last):
+  ...
+TypeError: matrix_divided() takes 2 positional arguments but 3 were given
