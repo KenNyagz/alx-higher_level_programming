@@ -5,8 +5,9 @@
    has method that returns a printable string representation of obj using "#"
    has method that return a str representation of an instance
    contains method that delete objects
-   
+   Class variable adjust
 """
+
 
 class Rectangle:
     """
@@ -16,12 +17,13 @@ class Rectangle:
        __del__ instance method that deletes an obj when del is called
     """
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         self.__width = 0
         self.__height = 0
         self.width = width
         self.height = height
-        number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -74,5 +76,4 @@ class Rectangle:
            Prints when deleting instance
         """
         print("Bye rectangle...")
-        number_of_instances -= 1
-    
+        Rectangle.number_of_instances -= 1
