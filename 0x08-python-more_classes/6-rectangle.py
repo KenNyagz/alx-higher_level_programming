@@ -15,7 +15,7 @@ class Rectangle:
        __repr__ method returns human readable object representation
        __del__ instance method that deletes an obj when del is called
     """
-    number_of_instance = 0
+    number_of_instances = 0
     def __init__(self, width=0, height=0):
         self.__width = 0
         self.__height = 0
