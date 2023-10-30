@@ -17,6 +17,7 @@ class Rectangle:
        __del__ instance method that deletes an obj when del is called
     """
     number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         self.__width = 0
@@ -76,7 +77,4 @@ class Rectangle:
            Prints when deleting instance
         """
         print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1
-
-    print_symbol = '#'
-        
+        Rectangle.number_of_instances -= 1        
