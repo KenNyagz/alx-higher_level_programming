@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """Solving nqueens problem chess
-   n being the number of queens as well as the 
+   n being the number of queens as well as the
    no of cols and rows of chess board
 """
+
 
 import sys
 def main:
@@ -18,4 +19,3 @@ def main:
     if n < 4:
         print("N must be at least 4")
         sys.exit(1)
-
