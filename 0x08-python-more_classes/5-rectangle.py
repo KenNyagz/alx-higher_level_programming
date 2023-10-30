@@ -4,7 +4,7 @@
    Only takes positive integers lest raises an error
    has method that returns a printable string representation of obj using "#"
    has method that return a str representation of an instance
-   contains method that delete objects   
+   contains method that delete objects
 """
 
 
@@ -58,7 +58,7 @@ class Rectangle:
             return ""
         else:
             rect_str = ""
-             for i in range(self.__height):
+            for i in range(self.__height):
                 rect_str += "#" * self.__width
                 if i != self.__height - 1:
                     rect_str += "\n"
