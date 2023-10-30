@@ -13,8 +13,8 @@ class Rectangle:
         self.__width = 0
         self.__height = 0
 
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
@@ -40,10 +40,8 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-
     def area(self):
         return self.__width * self.__height
-
 
     def perimeter(self):
         return (self.__width + self.__height) * 2
