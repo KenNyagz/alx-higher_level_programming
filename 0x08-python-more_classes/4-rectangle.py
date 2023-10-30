@@ -1,4 +1,4 @@
-#!/ussr/bin/pyhton3
+#!/ussr/bin/python3
 """
    A Class Rectangle that takes two integers and intanciates a rectangle
    Only takes positive integers lest raises an error
