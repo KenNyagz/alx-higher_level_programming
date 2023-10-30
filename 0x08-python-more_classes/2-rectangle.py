@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """
-
+   Class Rectangle that takes two integers(strictly)
+   has area and perimeter methods
 """
 
 
 class Rectangle:
     """
-
+       Function raises exceptions when non integers are passed
     """
     def __init__(self, width=0, height=0):
         self.__width = 0
