@@ -1,12 +1,17 @@
 #!/usr/bin/python3
 """
-
+   A Class Rectangle that takes two integers and intanciates a rectangle
+   Only takes positive integers lest raises an error
+   has method that returns a printable string representation of obj using "#"
+   has method that return object representation
 """
 
 
 class Rectangle:
     """
-
+       Class Rectangle that intanciates a rectangle
+       __str__ method gets a printable string representation of obj using "#"
+       __repr__ method returns human readable object representation
     """
     def __init__(self, width=0, height=0):
         # self.__width = 0
