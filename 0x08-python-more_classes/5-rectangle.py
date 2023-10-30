@@ -4,7 +4,7 @@
    Only takes positive integers lest raises an error
    has method that returns a printable string representation of obj using "#"
    has method that return a str representation of an instance
-   
+   contains method that delete objects   
 """
 
 
@@ -13,7 +13,7 @@ class Rectangle:
        Class Rectangle that intanciates a rectangle
        __str__ method gets a printable string representation of obj using "#"
        __repr__ method returns human readable object representation
-       
+       __del__ instance method that deletes an obj when del is called
     """
     def __init__(self, width=0, height=0):
         # self.__width = 0
