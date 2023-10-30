@@ -1,3 +1,12 @@
+#!/ussr/bin/pyhton3
+"""
+   A Class Rectangle that takes two integers and intanciates a rectangle
+   Only takes positive integers lest raises an error
+   has method that returns a printable string representation of obj using "#"
+
+"""
+
+
 class Rectangle:
     """
        Class Rectangle that intanciates a rectangle
