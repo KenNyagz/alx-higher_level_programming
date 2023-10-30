@@ -7,7 +7,7 @@
 
 def text_indentation(text):
     """
-
+       inserts two new lines upon encountering '.', '?' and ':' symbols
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
@@ -23,3 +23,4 @@ def text_indentation(text):
             newline_flag = True
         else:
             newline_flag = False
+# text_indentation("The zen of python")

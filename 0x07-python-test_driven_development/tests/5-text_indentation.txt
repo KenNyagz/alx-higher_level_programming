@@ -1,0 +1,32 @@
+#Testing text_indentation func
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+1. Test case: Normal use case
+>>> text_indentation("my name is: ken")
+my name is:
+<BLANKLINE>
+ken
+
+2. Test case: No arg passed
+>>> text_indentation()
+Traceback (most recent call last):
+  ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+
+3. Test case: Non-string arg passsed
+>>> text_indentation(123)
+Traceback (most recent call last):
+  ... 
+TypeError: text must be a string
+
+4. Test case: More than one arg passed
+>>> text_indentation("More", "Args")
+Traceback (most recent call last):
+  ...
+TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+5.Test case: str with none of the 'delimiters' inside
+>>> text_indentation("The zen of python")
+The zen of python
