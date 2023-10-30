@@ -71,4 +71,4 @@ class Rectangle:
         """
            Prints when deleting instance
         """
-        print("Bye Rectangle...")
+        print("Bye rectangle...")
