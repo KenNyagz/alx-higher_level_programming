@@ -10,7 +10,7 @@ class LockedClass:
     """
     __slots__ = ('first_name',)
 
-    def __setattr__(self, key, value):
+    def __setattr__(self, name, value):
         if hasattr(self, name):
              super().__setattr__(name, value)
         elif name == 'first_name':
