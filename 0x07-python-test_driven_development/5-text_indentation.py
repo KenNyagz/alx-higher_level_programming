@@ -23,4 +23,3 @@ def text_indentation(text):
             newline_flag = True
         else:
             newline_flag = False
-# text_indentation("The zen of python")

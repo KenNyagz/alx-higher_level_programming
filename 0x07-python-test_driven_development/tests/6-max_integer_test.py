@@ -2,20 +2,19 @@
 """
    Module to test functon that finds the max integer in a list
 """
-
-
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class test_max_integer(unittest.TestCase):
     """
-       using unittest subclass to test 
+       using unittest subclass to test
     """
 
     # pass list of lists(matrix)
     def test_normaluse(self):
-       """Testing normal use case"""
-       self.assertEqual(max_integer([1, 2, 3, 4]), 4)
+        """Testing normal use case"""
+        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
 
     def test_listWithFloat(self):
         """Test case: list with float components"""
@@ -56,6 +55,7 @@ class test_max_integer(unittest.TestCase):
         """Test case: Lists of list(matrices) passed as args"""
         with self.assertRaises(TypeError):
             max_integer([1, [2, 3], 4])
+
 
 if __name__ == '__main__':
     unittest.main()
