@@ -30,3 +30,9 @@ TypeError: text_indentation() takes 1 positional argument but 2 were given
 5.Test case: str with none of the 'delimiters' inside
 >>> text_indentation("The zen of python")
 The zen of python
+
+6. Test case: passing 'None' to func
+>>> text_indentation(None)
+Traceback (most recent call last):
+  ...
+TypeError: text must be a string
