@@ -14,7 +14,7 @@ class LockedClass:
         self.__first_name = first_name
 
     def __setattr__(self, key, value):
-        if self.__locked and not hasattr(self, key = first_name):
+        if self.__locked and key != 'first_name':
             raise AttributeError
 
     @property
