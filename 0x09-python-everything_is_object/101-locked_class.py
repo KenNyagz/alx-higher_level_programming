@@ -8,10 +8,13 @@ class LockedClass:
     """
        Only possible attribute is first_name instance attribute
     """
-    __slots__ = ('first_name',)
 
     def __setattr__(self, name, value):
-        if hasattr(self, name) and name == 'first_name':
-            super().__setattr__(name, value)
-        else:
-            raise AttributeError("Cannot create new instance attribute")
+        if not hasattr(self, name) and name != 'first_name':
+            raise AttributeError("'LockedClass' object has no attribute '{}'".format(name))
+        super().__setattr__(name, value)
+
+    def __delattr__(self, name):
+        if name != "first_name":
+            raise AttributeError("'LockedClass' object has no attribute'{}'".format(name))
+        supe().__delattr__(name)
