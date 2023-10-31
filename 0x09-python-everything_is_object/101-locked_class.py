@@ -8,14 +8,15 @@ class LockedClass:
     """
        Only possible attribute is first_name instance attribute
     """
-    __locked = False
-
-    def __init__(self, first_name):
-        self.__first_name = first_name
+    __slots__ = ('first_name',)
 
     def __setattr__(self, key, value):
-        if self.__locked and key != 'first_name':
-            raise AttributeError
+        if hasattr(self, name):
+             super().__setattr__(name, value)
+        elif name == 'first_name':
+             super().__setattr__(name, value)
+        else:
+            raise AttributeError(f"'LockedClass' object has no attribute {name}'")
 
     @property
     def first_name(self):
