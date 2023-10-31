@@ -18,13 +18,13 @@ class LockedClass:
         else:
             raise AttributeError(f"'LockedClass' object has no attribute {name}'")
 
-    @property
-    def first_name(self):
-        return self.__first_name
+    #@property
+    #def first_name(self):
+     #   return self.__first_name
 
-    @first_name.setter
-    def first_name(self, value):
-        self.__firt_name = value
+    #@first_name.setter
+    #def first_name(self, value):
+     #   self.__firt_name = value
 
-    def __freeze(self):
-        self.__locked = True
+    #def __freeze(self):
+        #self.__locked = True'
