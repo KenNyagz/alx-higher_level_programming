@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-
+   Function that multiplies two matrices
 """
 
 
 def matrix_mul(m_a, m_b):
-    """"
-
+    """
+       Attempt to multiply to matrices; after verifying various checks
     """
     if not isinstance(m_a, list):
         raise TypeError("m_a must be a list")
