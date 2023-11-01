@@ -59,11 +59,12 @@ Testing negative floats
 >>> add_integer(-6.8, -2.3)
 -8
 
-(Not sure)Testing infinity
->> add_integer(float('inf'))
+Testing overflow
+>>> large_no = float('inf')
+>>> add_integer(large_no)
 Traceback (most recent call last):
   ...
-OverflowError: cannot convert float infinity to integer
+ValueError: a cannot be positive infinity
 
 
 #testing overflow
