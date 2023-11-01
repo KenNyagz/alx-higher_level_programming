@@ -9,7 +9,6 @@ class LockedClass:
        Only possible attribute is first_name instance attribute
     """
 
-    __slots__ = ('fisrt_name',)
     def __setattr__(self, name, value):
         if not hasattr(self, name) and name != 'first_name':
             raise AttributeError("'LockedClass' object has no attribute '{}'".
