@@ -19,4 +19,4 @@ class LockedClass:
         if name != "first_name":
             raise AttributeError("'LockedClass' object has no attribute'{}'".
                                  format(name))
-        supe().__delattr__(name)
+        super().__delattr__(name)
