@@ -4,42 +4,51 @@
 >>> add_integer(2, 3)
 5
 
+#Testing noraml use case
 >>> add_integer(2)
 100
 
+#Testing int and float args
 >>> add_integer(2, 3.0)
 5
 
+#Testing non-number args
 >>> add_integer(2, "d")
 Traceback (most recent call last):
   ...
 TypeError: b must be an integer
 
 
+#Testing non-numeric args
 >>> add_integer("a", 2)
 Traceback (most recent call last):
   ...
 TypeError: a must be an integer
 
 
+#Testing non-numeric args
 >>> add_integer("a", "b")
 Traceback (most recent call last):
   ...
 TypeError: a must be an integer
 
 
+#Testing float args
 >>> add_integer(2.2, 3.2)
 5
 
+#Testing Negative ints
 >>> add_integer(3, -4)
 -1
 
+#Testing no arguments
 >>> add_integer()
 Traceback (most recent call last):
   ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
 
 
+#Testing single negative argument
 >>> add_integer(-2)
 96
 
@@ -50,7 +59,7 @@ Testing negative floats
 >>> add_integer(-6.8, -2.3)
 -8
 
-Testing infinity
+(Not sure)Testing infinity
 >> add_integer(float('inf'))
 Traceback (most recent call last):
   ...
