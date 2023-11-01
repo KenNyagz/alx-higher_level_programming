@@ -60,6 +60,10 @@ class test_max_integer(unittest.TestCase):
         """Test case: List with only one element"""
         self.assertEqual(max_integer([2]), 2)
 
+    def test_maxfirst(self):
+        """Test case: Case when max int is at the 1st elem"""
+        self.assertEqual(max_integer([5, 4, 3]), 5)
+
 
 if __name__ == '__main__':
     unittest.main()
