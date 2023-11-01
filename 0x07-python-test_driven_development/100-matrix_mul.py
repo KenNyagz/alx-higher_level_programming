@@ -40,3 +40,6 @@ def matrix_mul(m_a, m_b):
     for j in m_b:
         if len(j) != len_rows_b:
             raise TypeError("each row of m_b must be of the same size")
+
+    if len_rows_a != len(m_b):
+        raise ValueError("m_a and m_b can't be multiplied")
