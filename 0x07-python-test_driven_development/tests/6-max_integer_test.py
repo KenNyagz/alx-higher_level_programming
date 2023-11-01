@@ -64,6 +64,10 @@ class test_max_integer(unittest.TestCase):
         """Test case: Case when max int is at the 1st elem"""
         self.assertEqual(max_integer([5, 4, 3]), 5)
 
+    def test_onlynegative(self):
+        """Testing list of only negative numbers"""
+        self.assertEqual(max_integer([-2, -5.2, -4, -3.5]), -2)
+
 
 if __name__ == '__main__':
     unittest.main()
