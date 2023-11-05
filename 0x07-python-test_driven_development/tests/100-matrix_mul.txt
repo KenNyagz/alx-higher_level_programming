@@ -1,3 +1,65 @@
-#Testing matrix mul function
+#Teesting matrix mul function
+n3 -m doctest -v ./tests/100-matrix_mul.txt | tail -2 python3 -m doctest -v ./tests/100-matrix_mul.txt | tail -2
 
 >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+1.TestCase:No args
+>>> matrix_mul()
+Traceback (most recent call last):
+  ...
+TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+
+2.TestCase:m_a not a matrix, a string
+>>> matrix_mul("matrix1", [[1, 2], [3, 4]])
+Traceback (most recent call last):
+ ...
+TypeError: m_a must be a list
+
+
+3.TestCase:m_a not a matrix, a float
+>>> matrix_mul(3.142, [[1, 2], [3, 4]])
+Traceback (most recent call last):
+ ...
+TypeError: m_a must be a list
+
+
+4.TestCase:m_a not a matrix, a list
+>>> matrix_mul([1, 2, 3, 4], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+...
+TypeError: m_a must be a list of lists
+
+
+5.TestCase:m_b not a matrix, an int
+>>> matrix_mul([[1, 2], [3, 4]], 6)
+Traceback (most recent call last):
+  ...
+TypeError: m_b must be a list
+
+
+6.Testcase:m_b rows not of equal lengths
+>>> matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8, 9]])
+Traceback (most recent call last):
+  ...
+TypeError: each row of m_b must be of the same size
+
+
+7.TestCase: Normal use case: Everything correct
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+
+
+8.TestCase: some elements of m_b not ints, floats
+>>> matrix_mul([[1, 2], [3, 4]], [[5, 6.43], [7, 9]])
+[[19, 24.43], [43, 55.29]]
+
+9.TestCase: Colums of m_a don't match with rows of m_a
+>>> matrix_mul([[1, 2, 3], [4, 5, 6]], [[2, 4], [3, 6]])
+Traceback (most recent call last):
+ ...
+ValueError: m_a and m_b can't be multiplied
+
+10. TestCase: Another correct use case
+>>> matrix_mul([[3, 4, 7, 8], [6, 5, 7, 9]], [[21, 2, 8], [5, 76, 45], [9, 8, 1], [7, 9, 3]])
+[[202, 438, 235], [277, 529, 307]]

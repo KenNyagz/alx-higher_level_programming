@@ -18,9 +18,9 @@ def matrix_mul(m_a, m_b):
     if not all(isinstance(row, list) for row in m_b):
         raise TypeError("m_b must be a list of lists")
 
-    if len(m_a) == 0:
+    if len(m_a) == 0 or len(m_a[0]) == 0:
         raise ValueError("m_a can't be empty")
-    if len(m_b) == 0:
+    if len(m_b) == 0 or len(m_b[0]) == 0:
         raise ValueError("m_b can't be empty")
 
     for row in m_a:
@@ -44,3 +44,12 @@ def matrix_mul(m_a, m_b):
     # Check number of columns in 1st matrix is = to no of rows in the 2nd
     if len_rows_a != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
+
+    resMatrix = [[0 for el in range(len(m_b[0]))] for elm in range(len(m_a))]
+
+    for i in range(len(m_a)):
+        for j in range(len(m_b[0])):
+            for k in range(len(m_b)):
+                resMatrix[i][j] += m_a[i][k] * m_b[k][j]
+
+    return resMatrix
