@@ -63,3 +63,10 @@ ValueError: m_a and m_b can't be multiplied
 10. TestCase: Another correct use case
 >>> matrix_mul([[3, 4, 7, 8], [6, 5, 7, 9]], [[21, 2, 8], [5, 76, 45], [9, 8, 1], [7, 9, 3]])
 [[202, 438, 235], [277, 529, 307]]
+
+
+11. Testcase: m_b not list of lists
+>>> matrix_mul([[1, 2], [3, 4]], [1, 2])
+Traceback (most recent call last):
+...
+TypeError: m_b must be a list of lists
