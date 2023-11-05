@@ -5,11 +5,9 @@
 class Node:
     """Singly linked list in python"""
 
-    def __init__(self, value):
+    def __init__(self, data, next_node=None):
         self.__data = data
-
-    def __init__(self, value):
-        self.__next_node = value
+        self.__nextnode = nextnode
 
     @property
     def data(self):
@@ -33,10 +31,12 @@ class Node:
          else:
              raise TypeError("next_node must be a Node object")
 
-    def __init__(self, data, next_node=None):
-        self.__data = data
-        self.__next_node = next_node
 
+"""
+   SinglyLinkList class
+   contains methods to add a new node to a linked list
+   Also a method to print contents of l.list
+"""
 
 class SinglyLinkedList:
     """Singly Linked list class"""
