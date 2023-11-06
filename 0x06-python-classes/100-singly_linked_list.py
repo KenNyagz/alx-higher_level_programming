@@ -58,5 +58,3 @@ class SinglyLinkedList:
     """Inserts node into the linked list at appropriate position"""
         while self.__data < head.__data:
             self.__head = head.__next_node
-         
-
