@@ -33,3 +33,10 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 Traceback (most recent call last):
   ...
 AttributeError: 'str' object has no attribute 'formart'
+
+
+6.Testcase: Test .area method
+>>> bg.area()
+Traceback (most recent call last):
+  ...
+Exception: area() is not implemented

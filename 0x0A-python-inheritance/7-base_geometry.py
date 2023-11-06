@@ -22,6 +22,6 @@ class BaseGeometry:
         validates value
         """
         if not isinstance(value, int):
-            raise TypeError("{:s} must be an integer".formart(name))
+            raise TypeError("{:s} must be an integer".formart(value))
         if value <= 0:
-            raise ValueError("{:s} must be greater than 0".formart(name))    
+            raise ValueError("{:s} must be greater than 0".formart(value))
