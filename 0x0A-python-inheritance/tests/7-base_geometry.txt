@@ -16,9 +16,8 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 
 3.Testcase: Basicgeometry passed a str
->> bg.integer_validator("five", 5)
-Traceback (most recent call last):
-  ...
+>>> bg.integer_validator("five", 5)
+
 
 
 4.Testcase: No args
