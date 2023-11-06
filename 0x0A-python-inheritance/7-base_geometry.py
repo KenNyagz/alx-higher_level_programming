@@ -23,5 +23,5 @@ class BaseGeometry:
         """
         if not isinstance(value, int):
             raise TypeError("{:s} must be an integer".formart(name))
-        if value < 0:
+        if value <= 0:
             raise ValueError("{:s} must be greater than 0".formart(name))    
