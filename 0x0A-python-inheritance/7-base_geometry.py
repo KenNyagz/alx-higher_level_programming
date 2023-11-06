@@ -13,13 +13,14 @@ class BaseGeometry:
     """
     def area(self):
         """
-        raises an Exception
+        Calculates an area; raises an Exception
         """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """
-        validates value
+        validates value to be sure it's int
+        name is the name of the dimension whose value is given
         """
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
