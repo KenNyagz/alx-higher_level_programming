@@ -1,0 +1,35 @@
+#Testing the class BasicGeometry
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BaseGeometry()
+
+1.Testcase: Normal use
+>>> bg.integer_validator(2, 4)
+
+
+2.Testcase: BasicGeometry passed 'None'
+>>> bg.integer_validator(None)
+Traceback (most recent call last):
+ ...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+3.Testcase: Basicgeometry passed a str
+>> bg.integer_validator("five", 5)
+Traceback (most recent call last):
+  ...
+
+
+4.Testcase: No args
+>>> bg.integer_validator()
+Traceback (most recent call last):
+  ...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+
+5.Testcase: None passed as second arument in .integer_validator
+>>> bg.integer_validator(5, None)
+Traceback (most recent call last):
+  ...
+AttributeError: 'str' object has no attribute 'formart'
