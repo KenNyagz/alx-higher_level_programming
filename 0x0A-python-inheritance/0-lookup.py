@@ -4,6 +4,7 @@
    and methods of an object
 """
 
+
 def lookup(obj):
     """
        gets object's list of available attributes nad methods
