@@ -28,14 +28,9 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0".formart(name))
 
 
-"""
-class Rectangle that inherits from BaseGeometry   
-"""
-
-
 class Rectangle(BaseGeometry):
     """
-
+       class Rectangle that inherits from BaseGeometry
     """
     def __init__(self, width, height):
         """Initializes Rectangle base on class BaseGeometry"""
