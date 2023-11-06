@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""A class BaseGeometry
+"""
+   A class BaseGeometry
    That validates only integers
    Raises exception if not ints
 """
@@ -11,11 +12,15 @@ class BaseGeometry:
        Check for integers, if not raises Exception
     """
     def area(self):
-    """raises an Exception"""
+    """
+       raises an Exception
+    """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-    """validates value"""
+    """
+       validates value
+    """
         if not isinstance(value, int):
             raise TypeError("<name> must be an integer")
         if value < 0:
