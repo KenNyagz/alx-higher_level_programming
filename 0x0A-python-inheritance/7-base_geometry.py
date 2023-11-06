@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A class BaseGeometry
    That validates only integers
+   Raises exception if not ints
 """
 
 
