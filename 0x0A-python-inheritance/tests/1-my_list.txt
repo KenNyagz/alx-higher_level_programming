@@ -1,0 +1,10 @@
+#testing print_sorted function
+
+>>> MyList = __import__('1-my_list').MyList
+
+1.TestCase: my_list passed 
+>>> 
+
+
+
+2.TestCase:
