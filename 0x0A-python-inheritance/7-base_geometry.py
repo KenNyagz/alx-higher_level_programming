@@ -22,7 +22,7 @@ class BaseGeometry:
         validates value to be sure it's int
         name is the name of the dimension whose value is given
         """
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
