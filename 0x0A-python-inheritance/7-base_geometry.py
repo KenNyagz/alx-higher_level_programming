@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""
-    A class BaseGeometry
-    That validates only integers
+"""A class BaseGeometry
+   That validates only integers
 """
 
 
