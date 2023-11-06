@@ -8,4 +8,5 @@ class MyList(list):
        Subclass of 'list'
     """
     def print_sorted(self):
-        print(sorted(self))
+        sorted_list = sorted(self)
+        print(sorted_list)
