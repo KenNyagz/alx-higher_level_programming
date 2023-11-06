@@ -7,4 +7,20 @@
 [1, 2, 3, 4]
 
 
-2.TestCase:
+2.TestCase:my_list passed 'None'
+>>> MyList.print_sorted(None)
+Traceback (most recent call last):
+  ...
+TypeError: 'NoneType' object is not iterable
+
+
+3.TestCase: MyList passed no args
+>>> MyList.print_sorted()
+Traceback (most recent call last):
+ ...
+TypeError: print_sorted() missing 1 required positional argument: 'self'
+
+
+4.Testcase: MyList passed a string
+>>> MyList.print_sorted("One, two, three")
+[' ', ' ', ',', ',', 'O', 'e', 'e', 'e', 'h', 'n', 'o', 'r', 't', 't', 'w']
