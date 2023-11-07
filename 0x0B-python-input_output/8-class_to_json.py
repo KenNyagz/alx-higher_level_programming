@@ -17,5 +17,5 @@ def class_to_json(obj):
     elif hasattr(obj, '__dict__'):
         return {key: class_to_json(val) for key, val in obj.__dict__.items()}
     else:
-        raise TypeError("Object of type {} is not JSON
-                        serializable".format(type(obj).__name__))
+        raise TypeError("Object of type {} is not JSON serializable".
+                        format(type(obj).__name__))
