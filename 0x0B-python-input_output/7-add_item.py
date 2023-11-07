@@ -12,11 +12,13 @@ def add_item(arguments):
     """
     adds all arguments to a Python list
     """
-    if os.path.exists("add_item.json"):
-        my_list = load_from_json_file("add_item.json")
-    else:
-        my_list = []
+arguments = sys.argv[1:]
 
-    my_list.extend(arguments)
+try:
+    existing_list = load_from_json_file("add_item.json")
+except FileNotFoundError:
+    existing_list = []
 
-    save_to_json_file(my_list, "add_item.json")
+updated_list = existing_list + arguments
+
+save_to_json_file(updated_list, "add_item.json")
