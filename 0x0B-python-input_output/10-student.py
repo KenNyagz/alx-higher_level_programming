@@ -39,11 +39,14 @@ class Student:
 
     def to_json(self, attrs=None):
         """retrieves a dictionary representation of a Student instance"""
-        if attrs is None:
-            return class_to_json(self)
-        elif isinstance(attrs, list) and all(isinstance(attr, str)
-                                             for attr in attrs):
-            return {att: class_to_json(getattr(self, att)) for att in attrs}
+       # if attrs is None:
+           # return class_to_json(self)
+       # elif isinstance(attrs, list) and all(isinstance(attr, str)
+         #                                    for attr in attrs):
+        #    return {att: class_to_json(getattr(self, att)) for att in attrs}
 
-        else:
-            raise TypeError("attrs must be a list of strings or None")
+       # else:
+           # raise TypeError("attrs must be a list of strings or None")
+        if attrs != None and all(isinstance(attr, str) for attr in attrs):
+            return {attr: getattr(self, attr) for attr in attrs is hasattr(self, attr)}
+        return self.__dict__
