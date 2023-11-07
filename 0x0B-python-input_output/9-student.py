@@ -1,4 +1,22 @@
 #!/usr/bin/python3
+
+
+def class_to_json(obj):
+    """
+    returns the dictionary description with simple data structure
+    for JSON serialization of object
+    """
+    if isinstance(obj, (list, dict, int, str, bool)):
+        return obj
+    elif isinstance(obj, (tuple, set)):
+        return list(obj)
+    elif hasattr(obj, '__dict__'):
+        return {key: class_to_json(val) for key, val in obj.__dict__.items()}
+    else:
+        raise TypeError("Object of type {} is not JSON serializable".
+                        format(type(obj).__name__))
+
+
 """
 Class Student with two names and age attrs +
 method that gets dict repr of obj
@@ -17,8 +35,4 @@ class Student:
 
     def to_json(self):
         """retrieves a dictionary representation of a Student instance"""
-        return {
-                "fisrt_name": self.first_name,
-                "last_name": self.last_name,
-                "age": self.age
-               }
+        return class_to_json(self)
