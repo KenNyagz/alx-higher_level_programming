@@ -12,8 +12,17 @@ def append_after(filename="", search_string="", new_string=""):
     """
     tfilename = filename + ".tmp"
 
-    with open(filename, 'r') as filein, open(tfilename, 'w') as fileout:
-        for line in filein:
-            fileout.write(line)
+    with open(filename, 'r+') as fle:
+        lines = fle.readlines()
+        newlines = []
+
+        for line in lines:
             if search_string in line:
-                fileout.write(new_string + '\n')
+                newlines.append(line)
+                newlines.append(new_string)
+            else:
+                newlines.append(line)
+
+        fle.seek(0)
+        fle.truncate()
+        fle.writelines(newlines)
