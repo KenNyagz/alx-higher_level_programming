@@ -5,32 +5,43 @@ script that reads stdin line by line and computes metrics
 import sys
 
 
-def printstats(stats):
-    """  """
-    totalsize = sum(stats.values())
-    print("Total file size: File size: {}".format(totalsize))
-    for statuscode in sorted(stats):
-        count = stats[statuscode]
-        print("{}: {}".format(status_code, count))
+def print_metrics(sc, fs):
 
-def process_input():
-    stats = {}
-    linecount = 0
+
+    print(f"File size: {fs}")
+    for code in sorted(sc.keys()):
+        print(f"{code}: {sc[code]}")
+
+def parse_log_line(line, sc, fs):
+    elements = line.strip().split(" ")
+    if len(elements) == 9:
+        code = elements[7]
+        file_size = int(elements[8])
+        fs += file_size
+        if code in sc:
+            sc[code] += 1
+        else:
+            sc[code] = 1
+    return sc, fs
+
+def main():
+    sc = {}
+    fs = 0
+    lc = 0
 
     try:
         for line in sys.stdin:
-            linecount += 1
-            ip, _, _, _, statuscode, filesize = line.split()[0:6]
+            sc, fs = parse_log_line(line, sc, fs)
+            lc += 1
 
-            if statuscode in status:
-                stats[statuscode] += 1
-            else:
-                stats[statuscode] = 1
+            if lc % 10 == 0:
+                print_metrics(sc, fs)
 
-            if linecount % 10 == 0:
-                printstats(stats)
-                print()
     except KeyboardInterrupt:
-        printstats(stats)
+        pass
 
-process_input()
+    print_metrics(sc, fs)
+
+
+if __name__ == "__main__":
+    main()
