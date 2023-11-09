@@ -6,13 +6,16 @@ import sys
 
 
 def print_metrics(sc, fs):
-
-
+    """ Prints the total file size and the
+    number of occurrences for each status code
+    """
     print(f"File size: {fs}")
     for code in sorted(sc.keys()):
         print(f"{code}: {sc[code]}")
 
 def parse_log_line(line, sc, fs):
+    """ Parses a log line, updates status codes and total file size accordingly
+    """
     elements = line.strip().split(" ")
     if len(elements) == 9:
         code = elements[7]
@@ -25,6 +28,8 @@ def parse_log_line(line, sc, fs):
     return sc, fs
 
 def main():
+    """Main function
+    """
     sc = {}
     fs = 0
     lc = 0
