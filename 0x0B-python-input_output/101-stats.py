@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+script that reads stdin line by line and computes metrics
+prints the metrics
+"""
 
 import sys
 import signal
@@ -10,12 +14,14 @@ metrics = {
           }
 
 def print_metrics():
+    """prints the stats using a specified format"""
     print(f"Total file size: {metrics['totalsize']}")
     for code, count in sorted(metrics['status_code'].items()):
         if count > 0:
             print(f"{code}: {count}")
 
 def signal_handler(sig, frame):
+    """Not sure tbh"""
     print_metrics()
     sys.exit(0)
 
