@@ -7,7 +7,7 @@ from .base import Base
 class Rectangle(Base):
     """Child to class Base
     """
-    
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Init method"""
         super().__init__(id)
@@ -44,7 +44,7 @@ class Rectangle(Base):
         """height setter"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
-        if  value <= 0:
+        if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
 
@@ -91,5 +91,5 @@ class Rectangle(Base):
 
     def __str__(self):
         """ printing format"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y
-                ,self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
+                                                       self.width, self.height)
