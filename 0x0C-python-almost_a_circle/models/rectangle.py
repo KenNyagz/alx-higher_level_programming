@@ -11,10 +11,14 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Init method"""
         super().__init__(id)
-        self.__width = height
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.__width = 0
+        self.__height = 0
+        self.__x = 0
+        self.__y = 0
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -22,9 +26,13 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, width):
+    def width(self, value):
         """width setter fn"""
-        self.__width = width
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
 
     @property
     def height(self):
@@ -32,9 +40,13 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self, height):
+    def height(self, value):
         """height setter"""
-        self.__height = height
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if  value <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = value
 
     @property
     def x(self):
@@ -44,6 +56,10 @@ class Rectangle(Base):
     @x.setter
     def x(self, val):
         """ 'x' setter"""
+        if type(val) is not int:
+            raise TypeError("x must be an integer")
+        if val < 0:
+            raise ValueError("x must be >= 0")
         self.__x = val
 
     @property
@@ -54,4 +70,8 @@ class Rectangle(Base):
     @y.setter
     def y(self, val):
         """ 'y' setter"""
+        if type(val) is not int:
+            raise TypeError("y must be an integer")
+        if val < 0:
+            raise ValueError("y must be >= 0")
         self.__y = val
