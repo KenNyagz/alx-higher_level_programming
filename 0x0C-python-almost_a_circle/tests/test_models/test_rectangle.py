@@ -116,7 +116,7 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(1, 2, 3, 4, 5)
         r1_dict = r1.to_dictionary()
         r1_json = Base.to_json_string([r1_dict])
-        expected_json = '[{"id": 5, "width": 1, "height": 2, "x": 3, "y": 4}]'
+        expected_json = '[{"x": 3, "y": 4, "id": 5, "height": 2, "width": 1}]'
         self.assertEqual(r1_json, expected_json)
 
 

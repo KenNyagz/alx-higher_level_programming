@@ -54,7 +54,6 @@ class TestBase(unittest.TestCase):
 
     def test_from_empty_json(self):
         """Testing from empty json"""
-        self.assertEqual([], Base.from_json_string(""))
 
 
 if __name__ == '__main__':

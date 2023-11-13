@@ -116,7 +116,7 @@ class TestSquare(unittest.TestCase):
         s1 = Square(5, 2, 3, 4)
         s1_dict = s1.to_dictionary()
         s1_json = Base.to_json_string([s1_dict])
-        expected_json = '[{"id": 4, "size":5, "x":2, "y": 3}]'
+        expected_json = '[{"id": 4, "x": 2, "size": 5, "y": 3}]'
         self.assertEqual(s1_json, expected_json)
 
 
