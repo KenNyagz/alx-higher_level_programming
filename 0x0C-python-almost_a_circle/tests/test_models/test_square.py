@@ -109,7 +109,17 @@ class TestSquare(unittest.TestCase):
         """Testing no args passed"""
         with self.assertRaises(TypeError):
             s12 = Square()
+    
+    def test_dict_to_json(self):
+        """Test the conversion of dictionary to JSON string."""
+        s1 = Square(5, 2, 3, 4)
+        s1_dict = s1.to_dictionary()
+        s1_json = Base.to_json_string([s1_dict])
+        expected_json = '[{"id": 4, "size":5, "x":2, "y": 3}]'
+        self.assertEqual(s1_json, expected_json)
+
 
 if __name__ == "__main__":
-    """if run as main modl"""
+    """if run as main model"""
     unittest.main()
+

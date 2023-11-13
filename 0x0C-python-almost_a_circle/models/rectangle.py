@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """class Rectangle that inherits from Base
 """
-from .base import Base
+from models.base import Base
 # Base = __import__('base').Base
 
 
@@ -100,7 +100,9 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """ assigns an argument to each attribute based on keywords"""
         if args:
-            super().update(*args)
+            attr_list = ["id", "width", "height", "x", "y"]
+            for i in range(len(args)):
+                setattr(self, attr_list[i], args[i])
         elif kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)

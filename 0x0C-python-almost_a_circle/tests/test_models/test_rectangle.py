@@ -111,9 +111,17 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r12 = Rectangle()
 
+    def test_dict_to_json(self):
+        """Test the conversion of dictionary to JSON string."""
+        r1 = Rectangle(1, 2, 3, 4, 5)
+        r1_dict = r1.to_dictionary()
+        r1_json = Base.to_json_string([r1_dict])
+        expected_json = '[{"id": 5, "width": 1, "height": 2, "x": 3, "y": 4}]'
+        self.assertEqual(r1_json, expected_json)
 
 
 
 if __name__ == "__main__":
     """if run as main modl"""
     unittest.main()
+
