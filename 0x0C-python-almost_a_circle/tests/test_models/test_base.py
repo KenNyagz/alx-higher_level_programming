@@ -21,9 +21,8 @@ class TestBase(unittest.TestCase):
         b2 = Base()
         self.assertEqual(b2.id, 1)
 
-    #def test_creation(self):
+    # def test_creation(self):
         """Testing create"""
-        
 
     def test_neg_int(self):
         """Testing negative arg"""
@@ -35,7 +34,7 @@ class TestBase(unittest.TestCase):
         json_str = Base.to_json_string([])
         self.assertTrue(type(json_str) is str)
         self.assertEqual(json_str, '[]')
-        
+
     def test_to_json_str(self):
         """Testing to_json_string method"""
         Base.Base_nb_objects = 0
@@ -55,7 +54,7 @@ class TestBase(unittest.TestCase):
 
     def test_from_empty_json(self):
         """Testing from empty json"""
-        
+        self.assertEqual([], Base.from_json_string(""))
 
 
 if __name__ == '__main__':
