@@ -28,12 +28,12 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(self.s2.size, 5)
 
     def test_x(self):
-        """Test for functioning width"""
+        """Test for functioning x"""
         self.assertEqual(self.s1.x, 0)
         self.assertEqual(self.s2.x, 2)
 
     def test_y(self):
-        """Test for functioning height"""
+        """Test for functioning y"""
         self.assertEqual(self.s1.y, 0)
         self.assertEqual(self.s2.y, 0)
         
@@ -111,4 +111,5 @@ class TestSquare(unittest.TestCase):
             s12 = Square()
 
 if __name__ == "__main__":
+    """if run as main modl"""
     unittest.main()
