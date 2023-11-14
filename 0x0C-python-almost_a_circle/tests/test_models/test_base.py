@@ -19,10 +19,13 @@ class TestBase(unittest.TestCase):
     def test_no_args(self):
         """Testing no args"""
         b2 = Base()
-        self.assertEqual(b2.id, 1)
+        self.assertEqual(b2.id, 2)
 
-    # def test_creation(self):
-        """Testing create"""
+    def test_creation(self):
+        """Testing create function in class Base"""
+        b4 = Base()
+        b4.create(4)
+        self.assertEqual(b4.id, 4)
 
     def test_neg_int(self):
         """Testing negative arg"""
