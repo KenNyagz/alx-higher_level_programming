@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Class Node - defines node of a singly linked list
-   SinglyLinkedList - defines a singly linked list comprising of 
+   SinglyLinkedList - defines a singly linked list comprising of
    single pointer nodes
 """
 
@@ -33,11 +33,12 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-         """Sets pointer to next node inside the node"""
-         if value == None or isinstance(value, Node):
-             self.__next_node = value
-         else:
-             raise TypeError("next_node must be a Node object")
+        """Sets pointer to next node inside the node"""
+        if value is None or isinstance(value, Node):
+            self.__next_node = value
+        else:
+            raise TypeError("next_node must be a Node object")
+
 
 class SinglyLinkedList:
     """Singly Linked list class"""
