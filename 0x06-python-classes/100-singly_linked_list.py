@@ -6,12 +6,12 @@
 
 
 class Node:
-    """Singly linked list in python"""
+    """Node implementation in python"""
 
     def __init__(self, data, next_node=None):
         """Initializes a linked list node"""
-        self.__data = data
-        self.__nextnode = nextnode
+        self.data = data
+        self.next_node = next_node
 
     @property
     def data(self):
@@ -39,22 +39,28 @@ class Node:
          else:
              raise TypeError("next_node must be a Node object")
 
-
-
 class SinglyLinkedList:
     """Singly Linked list class"""
-
 
     def __init__(self):
         """Initialises a singly linked list"""
         self.__head = None
 
-    while True:
+    def __str__(self):
         """Prints out linked list"""
-        print (head.__data(), file=stdout)
-        self.__head = head.__next_node
+        my_list = []
+        itertr = self.__head
+        while itertr is not None:
+            my_list.append(itertr.data)
+            itertr = itertr.next_node
+        my_list.sort()
+        finale = '\n'.join(str(elm) for elm in my_list)
+        return finale
 
     def sorted_insert(self, value):
         """Inserts node into the linked list at appropriate position"""
-        while self.__data < head.__data:
-            self.__head = head.__next_node
+        if self.__head is None:
+            self.__head = Node(value, self.__head)
+            return
+        new_node = Node(value, self.__head)
+        self.__head = new_node
