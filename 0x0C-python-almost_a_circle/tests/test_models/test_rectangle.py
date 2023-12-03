@@ -119,6 +119,34 @@ class TestRectangle(unittest.TestCase):
         expected_json = '[{"x": 3, "y": 4, "id": 5, "height": 2, "width": 1}]'
         self.assertEqual(r1_json, expected_json)
 
+    def test_update_method(self):
+        """Testing the update method with keyword arguments"""
+        r14 = Rectangle(1, 2)
+        r14.update(id=125, width=6, height=4)
+        self.assertEqual(str(r14), "[Rectangle] (125) 0/0 - 6/4")
+
+    def test_width_typeerror_str(self):
+        """Test not int for width"""
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            r = Rectangle("hello", 1)
+            with self.assertRaisesRegex(TypeError, "width must be an integer"):
+                r = Rectangle(True, 1)
+
+    def test_height_typeerror_str(self):
+        """not int for height"""
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            r = Rectangle(1, "hello")
+            with self.assertRaisesRegex(TypeError,
+                                        "height must be an integer"):
+                r = Rectangle(1, True)
+
+    def test_y_typeerror(self):
+        """not int for y"""
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            r = Rectangle(1, 1, 1, "hello")
+            with self.assertRaisesRegex(TypeError, "y must be an integer"):
+                r = Rectangle(1, 1, 1, True)
+
 
 if __name__ == "__main__":
     """if run as main modl"""

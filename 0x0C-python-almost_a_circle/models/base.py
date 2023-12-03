@@ -64,7 +64,7 @@ class Base:
         try:
             with open("{}.json".format(cls.__name__, "r")) as fle:
                 json_string = fle.read()
-                list_dicts = json.loads(json_string)
+                list_dicts = cls.from_json_string(json_string)
                 return [cls.create(**d) for d in list_dicts]
         except FileNotFoundError:
             return []

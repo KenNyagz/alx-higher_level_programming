@@ -19,7 +19,7 @@ class TestBase(unittest.TestCase):
     def test_no_args(self):
         """Testing no args"""
         b2 = Base()
-        self.assertEqual(b2.id, 2)
+        self.assertEqual(b2.id, 4)
 
     def test_creation(self):
         """Testing create function in class Base"""
@@ -57,6 +57,24 @@ class TestBase(unittest.TestCase):
 
     def test_from_empty_json(self):
         """Testing from empty json"""
+
+    def test_creation_with_id(self):
+        """Testing creation with specified id"""
+        b4 = Base(42)
+        self.assertEqual(b4.id, 42)
+
+    def test_id_after_creation_with_id(self):
+        """Testing id after creation with specified id"""
+        b5 = Base(42)
+        self.assertEqual(b5.id, 42)
+        b5.id = 99
+        self.assertEqual(b5.id, 99)
+
+    def test_creation_multiple_instances(self):
+        """Testing creation of multiple instances"""
+        b6 = Base()
+        b7 = Base()
+        self.assertNotEqual(b6.id, b7.id)
 
 
 if __name__ == '__main__':
