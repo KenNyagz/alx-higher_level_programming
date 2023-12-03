@@ -147,6 +147,9 @@ class TestRectangle(unittest.TestCase):
             with self.assertRaisesRegex(TypeError, "y must be an integer"):
                 r = Rectangle(1, 1, 1, True)
 
+    def test_width_valueerror(self):
+        """ints <= 0 for width"""
+        #with self.assertRaiseRegex(ValueError, "width must be > 0"):
 
 if __name__ == "__main__":
     """if run as main modl"""

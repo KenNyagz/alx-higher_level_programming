@@ -76,6 +76,13 @@ class TestBase(unittest.TestCase):
         b7 = Base()
         self.assertNotEqual(b6.id, b7.id)
 
+    def test_to_json_string_with_none(self):
+        """Testing to_json_string method with None as argument"""
+        self.assertEqual(Base.to_json_string(None), "[]")
+
+    def test_to_json_string_empty_list(self):
+        """Testing to_json_string method with an empty list"""
+        self.assertEqual(Base.to_json_string([]), "[]")
 
 if __name__ == '__main__':
     """unittest call"""
