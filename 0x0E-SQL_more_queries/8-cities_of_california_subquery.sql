@@ -3,4 +3,4 @@
 USE hbtn_0d_usa;
 SELECT id FROM states WHERE name = 'California' AS cali_id;
 SELECT name FROM cities WHERE state_id = cali_id;
-ORDER BY cities.id ASC;
+-- ORDER BY cities.id ASC;
