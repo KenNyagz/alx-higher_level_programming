@@ -2,4 +2,4 @@
 
 const cmdArgs = process.argv;
 
-console.log(cmdArgs[2], " is ", cmdArgs[3]);
+console.log(cmdArgs[2], ' is ', cmdArgs[3]);
