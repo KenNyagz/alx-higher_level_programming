@@ -11,9 +11,11 @@ function factorial (num) {
 }
 
 const args = process.argv;
-
 const num = parseInt(args[2]);
 
+if (args.length < 3) {
+  console.log(1);
+}
 if (!isNaN(num)) {
   console.log(factorial(num));
 }
