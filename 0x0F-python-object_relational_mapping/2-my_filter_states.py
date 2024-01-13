@@ -19,7 +19,7 @@ if __name__ == "__main__":
                          )
     state_name = sys.argv[4]
     cursor = db.cursor()
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id".\
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY state.id ASC".\
             format(state_name)
     cursor.execute(query)
 
