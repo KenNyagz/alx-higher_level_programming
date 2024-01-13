@@ -8,6 +8,8 @@ import MySQLdb
 if __name__ == "__main__":
     """ lists all states with a name starting with upper N from a db"""
     if (len(sys.argv) < 4):
+        print("Usage: ./script.py <mysql_username> \
+<mysql_password> <database_name>")
         sys.exit(1)
 
     db = MySQLdb.connect(host="localhost",
