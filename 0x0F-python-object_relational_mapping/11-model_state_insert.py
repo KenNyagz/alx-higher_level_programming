@@ -29,6 +29,7 @@ if __name__ == "__main__":
 
     new_city = State(name="Louisiana")
     session.add(new_city)
+    print(new_city.id)
     session.commit()
 
     session.close()
