@@ -5,7 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sys import exit, argv
 from model_state import Base, State
-from urllib.parse import quote_plus
+from urllib.parse import quote_plus  # to escape special charct '@' in passwd
 
 
 if __name__ == "__main__":
@@ -16,9 +16,10 @@ if __name__ == "__main__":
     user = argv[1]
     passwd = argv[2]
     db = argv[3]
-    passwd_escaped = quote_plus(passwd)
+    passwd_escaped = quote_plus(passwd)  # filterd/escaped special char '@'
 
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}".format(user, passwd_escaped, db))
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{\
+}".format(user, passwd_escaped, db))
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
