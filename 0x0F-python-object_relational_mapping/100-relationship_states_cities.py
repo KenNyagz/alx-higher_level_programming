@@ -5,9 +5,9 @@ from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sys import exit, argv
-from model_state import Base, State
+from relationship_state import Base, State
 from urllib.parse import quote_plus
-from model_city import City
+from relationship_city import City
 
 
 if __name__ == "__main__":
@@ -27,7 +27,9 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    california = State(name='California', cities=[City(name='San Francisco')])
-    session.add(california)
+    new_state = State(name="California")
+    new_city = City(name="San Francisco")
+    new_state.cities.append(new_city)
+    session.add(new_state)
     session.commit()
     session.close()
