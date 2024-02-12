@@ -7,7 +7,7 @@ An introduction to Javascript.
 - What are differences between var, const and let
 - What are all the data types available in JavaScript
 - How to use the if, if ... else statements
-- How to use comments
+- How to use comments in JS
 - How to affect values to variables
 - How to use while and for loops
 - How to use break and continue statements
