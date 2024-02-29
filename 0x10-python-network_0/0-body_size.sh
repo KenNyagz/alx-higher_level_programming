@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 # sends request to a specified url and displays the size of the body
 
 # Ensure URL is provided
