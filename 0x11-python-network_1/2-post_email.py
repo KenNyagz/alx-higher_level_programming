@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''
+'''sends a POST request to a passed URL and email,displays response body
 '''
 import urllib.parse
 import urllib.request
