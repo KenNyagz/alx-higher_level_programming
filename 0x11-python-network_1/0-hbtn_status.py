@@ -9,4 +9,4 @@ with urllib.request.urlopen(url) as response:
 print("Body response:")
 print("\t- type:", type(bytes_read))
 print("\t- content:", bytes_read)
-print("\t- utf8 content: OK")
+print("\t- utf8 content:", bytes_read.decode('utf-8'))
