@@ -4,9 +4,10 @@ obtained from the response header'''
 import urllib.request
 import sys
 
-url = sys.argv[1]
+if __name__ == "__main__":
+    url = sys.argv[1]
 
-request = urllib.request.Request(url)
-with urllib.request.urlopen(request) as response:
-    request_id = response.headers.get('X-Request-Id')
-    print(request_id)
+    request = urllib.request.Request(url)
+    with urllib.request.urlopen(request) as response:
+        request_id = response.headers.get('X-Request-Id')
+        print(request_id)
