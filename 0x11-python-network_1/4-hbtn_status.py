@@ -2,11 +2,12 @@
 '''Sends request to url, displays response body'''
 import requests
 
-if __name__ == "__main__":
-    url = 'https://alx-intranet.hbtn.io/status'
-    response = requests.get(url)
-    response = response.content.decode('utf-8')
+url = 'https://alx-intranet.hbtn.io/status'
 
-    print("Body Response:")
-    print("\t- type:", type(response))
-    print("\t- content:", response)
+response = requests.get(url)
+body = response.content.decode('utf-8')
+
+print("Body response:")
+print("\t- type:", type(body))
+print("\t- content:", body)
+print("\t- utf8 content:", body)
