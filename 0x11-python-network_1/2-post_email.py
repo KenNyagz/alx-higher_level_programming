@@ -9,8 +9,9 @@ if __name__ == "__main__":
     url = sys.argv[1]
     email = sys.argv[2]
 
-    data = urllib.parse.urlencode({'email': email}).encode('utf-8')
-    reqst = urllib.request.Request(url, data=data, method='POST')
+    data_ = urllib.parse.urlencode({'email': email})
+    data_ = data_.encode('utf-8')
+    reqst = urllib.request.Request(url, data_)
 
     with urllib.request.urlopen(reqst) as resp:
         cont = resp.read().decode('utf-8')
