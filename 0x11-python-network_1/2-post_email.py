@@ -1,16 +1,22 @@
 #!/usr/bin/python3
 '''sends a POST request to a passed URL and email,displays response body
 '''
-import urllib.request
+from urllib import parse, request
 import sys
 
 
-if __name__ == '__main__':
+def send_post_request(url, email):
+    data = parse.urlencode({'email': email}).encode()
+    req = request.Request(url, data=data)  # this will make the method "POST"
+
+    # Send the request and receive the response
+    with request.urlopen(req) as response:
+        response_body = response.read().decode('utf-8')
+        print(response_body)
+
+
+if __name__ == "__main__":
     url = sys.argv[1]
-    parameter = {"email": sys.argv[2]}
-    data = urllib.parse.urlencode(parameter)
-    data = data.encode("ascii")
-    req = urllib.request.Request(url, data)
-    with urllib.request.urlopen(req) as response:
-        body = response.read()
-    print(body.decode("ascii"))
+    email = sys.argv[2]
+
+    send_post_request(url, email)
