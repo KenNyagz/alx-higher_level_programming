@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-'''send request to url and display value of the 'X-Request-Id' variable 
+'''send request to url and display value of the 'X-Request-Id' variable
 obtained from the response header'''
 import urllib.request
 import sys
 
-   
 url = sys.argv[1]
 
 request = urllib.request.Request(url)
