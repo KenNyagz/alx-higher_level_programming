@@ -10,12 +10,12 @@ if __name__ == "__main__":
         letter = sys.argv[1]
     else:
         letter = ''
-        
+
     url = 'http://0.0.0.0:5000/search_user'
     data = {'q': letter}
-    
+
     response = requests.post(url, data=data)
-    
+
     # Check if response JSON body is a proper JSON
     try:
         json_data = response.json()
