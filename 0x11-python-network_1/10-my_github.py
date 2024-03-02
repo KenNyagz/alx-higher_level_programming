@@ -11,13 +11,10 @@ if __name__ == "__main__":
 
     url = 'https://api.github.com/user'
 
-    credentials = f"{username}:{passwd}"
-
-    headers = {'Authorization': f'Basic {credentials}'}
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, auth=(username, passwd))
 
     if response.status_code == 200:
         user_info = response.json()  # Parse the response JSON
         print(user_info['id'])
     else:
-        print('None')
+        print("None")
