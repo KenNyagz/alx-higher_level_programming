@@ -11,13 +11,17 @@ if __name__ == "__main__":
 
     url = 'https://api.github.com/user'
 
-    auth = (username, passwd)
-    headers = {'Accept': "application/vnd.github.v3+json"}
-    
-    response = requests.post(url, auth=auth)
+    # auth = (username, passwd)
+    #headers = {'Accept': "application/vnd.github.v3+json"}
+    headers = {'Authorization': f'Basic {username}:{passwd}'}
 
-    if response.status_code == 200:
-        user_info = response.json() # Parse the response JSON
-        print(user_info['id'])
-    else:
-        print('None')
+    #response = requests.post(url, auth=auth)
+    response = requests.get(url, headers=headers)
+
+    user_data = response.json()
+    print(user_data['id']) #user id
+    #if response.status_code == 200:
+        #user_info = response.json()  # Parse the response JSON
+        #print(user_info['id'])
+    #else:
+        #print('None')
