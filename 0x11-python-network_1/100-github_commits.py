@@ -19,7 +19,7 @@ if __name__ == "__main__":
         commits = response.json()
         for commit in commits:
             commit_data = commit['commit']
-            commit_hash =commit['sha']
+            commit_hash = commit['sha']
             author = commit_data['author']['name']
             print(f'{commit_hash}: {author}')
     else:
