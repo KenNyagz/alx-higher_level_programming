@@ -22,7 +22,7 @@ request.get(apiUrl, (error, response, body) => {
         }
       }
 
-      console.log('Number of movies with Wedge Antilles:', numMoviesWithWedge);
+      console.log(numMoviesWithWedge);
     } catch (parseError) {
       console.error('Error parsing response:', parseError);
     }
