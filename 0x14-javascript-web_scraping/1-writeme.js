@@ -1,13 +1,11 @@
 #!/usr/bin/node
 
-const fs = require('fs');
+const fileSys = require('fs');
 
-const filePath = process.argv[2];
-const stringToWrite = process.argv[3];
+const argv = process.argv.slice(2);
 
-fs.writeFile(filePath, stringToWrite, 'utf8', (err) => {
+fileSys.writeFile(argv[0], argv[1], 'utf-8', (err) => {
   if (err) {
-    // Print the error object if an error occurred
-    console.error('Error:', err);
+    console.log(err);
   }
 });
