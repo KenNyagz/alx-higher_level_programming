@@ -1,12 +1,14 @@
 #!/usr/bin/node
 
-const fileSys = require('fs');
-const filename = process.argv[2];
+const fs = require('fs');
 
-fileSys.readFile(filename, 'utf-8', (error, content) => {
-  if (error) {
-    console.log(error);
+const filePath = process.argv[2];
+
+// Read the file asynchronously
+fs.readFile(filePath, 'utf8', (err, data) => {
+  if (err) {
+    console.error('Error:', err);
   } else {
-    console.log(content);
+    console.log('File content:', data);
   }
 });
