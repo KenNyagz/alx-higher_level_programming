@@ -1,11 +1,12 @@
-$(document).ready(function () {
+$(document).ready(function() {
   $('#toggle_header').click(function() {
-    if ($('header').hasclass('red')){
-      $('header').removeclass('red').addClass('green');
+    if ($('header').hasClass('red')) {
+      $('header').removeClass('red').addClass('green');
     } else if ($('header').hasClass('green')) {
-      $('header').removeclass('green').addClass('red');
+      $('header').removeClass('green').addClass('red');
     } else {
-      $('header').addclass('red');
+      $('header').addClass('red');
     }
   });
 });
+
