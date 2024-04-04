@@ -12,3 +12,4 @@
 - How to make a GET request with JQuery Ajax
 - How to make a POST request with JQuery Ajax
 - How to listen/bind to DOM events
+- How to listen/bind to user events
